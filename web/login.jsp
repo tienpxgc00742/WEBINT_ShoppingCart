@@ -8,6 +8,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%
+//            boolean f = false;
+//            String _u = "";
+//            String _p = "";
+//            if(request.getCookies()!=null){
+//                Cookie[] c = request.getCookies();
+//                for (int i = 0; i < c.length; i++) {
+//                    Cookie temp = c[i];
+//                    if (temp.getName().equals("c_user")) {
+//                        f = true;
+//                        _u = temp.getValue();
+//                    }
+//                    if (temp.getName().equals("c_pass")) {
+//                        f = true;
+//                        _p = temp.getValue();
+//                    }
+//                }
+//            }
+//            if (f == false)//khi yet co cuc ki
+//            {
+        %>
+        
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>

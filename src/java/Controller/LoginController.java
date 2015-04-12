@@ -5,13 +5,17 @@
  */
 package Controller;
 
+import Model.Account;
+import Model.DataProcess;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,15 +36,39 @@ public class LoginController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String user=request.getParameter("txtUser");
+        String pass=request.getParameter("txtPass");
+        DataProcess dt=new DataProcess();
+        Account acc=new Account();
+        acc.setUser(user);
+        acc.setPass(pass);
+        if(dt.checkLogin(acc))
+        {
+            String check=request.getParameter("rbm");
+            if(check!=null)//user chon remember tai khoan
+            {
+                String[] names={"c_user","c_pass","c_type"};
+                String[] values={acc.getUser(),acc.getPass(),Integer.toString(acc.getType())};
+                for(int i=0;i<names.length;i++)
+                {
+                    Cookie c=new Cookie(names[i],values[i]);
+                    c.setMaxAge(24*60*60);
+                    response.addCookie(c);
+                }                
+            }
+        }
+//            HttpSession session=request.getSession();
+//            session.setAttribute("username", acc.getUser());
+//            response.sendRedirect("index.jsp");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");            
+            out.println("<title>Servlet NewServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + acc.getUser() + acc.getType()  + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
