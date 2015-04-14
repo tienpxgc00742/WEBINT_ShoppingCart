@@ -8,6 +8,45 @@
 <!DOCTYPE html>
 <html>
     <footer id="footer">
+        <section class="container otherddetails">
+        <div class="otherddetailspart">
+            <div class="innerclass"> <i class="fa fa-truck font60"></i>
+                <h2>Free shipping</h2>
+                <p>All over in world over $200</p>
+            </div>
+        </div>
+        <div class="otherddetailspart">
+            <div class="innerclass"> <i class="fa fa-thumbs-up font60"></i>
+                <h2>100% Guarantee </h2>
+                <p>Anytime Replacement </p>
+            </div>
+        </div>
+        <div class="otherddetailspart">
+            <div class="innerclass"> <i class="fa fa-money font60"></i>
+                <h2>Easy Payment</h2>
+                <p> Payment Gatway support</p>
+            </div>
+        </div>
+        <div class="otherddetailspart">
+            <div class="innerclass"> <i class="fa fa-clock-o font60"></i>
+                <h2>24hrs Shipping</h2>
+                <p> Free For <br>
+                    UK Customers </p>
+            </div>
+        </div>
+        <div class="otherddetailspart">
+            <div class="innerclass"> <i class="fa fa-gift font60"></i>
+                <h2>Over 5000 Choice</h2>
+                <p>50,000+ Products</p>
+            </div>
+        </div>
+        <div class="otherddetailspart">
+            <div class="innerclass"> <i class="fa fa-tags font60"></i>
+                <h2>Low Price</h2>
+                <p>Available in Low Price</p>
+            </div>
+        </div>
+    </section>
         <div class="copyrightbottom">
         <div class="container">
             <div class="row">

@@ -9,6 +9,11 @@ import Model.Account;
 import Model.DataProcess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -38,11 +43,11 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String user=request.getParameter("txtUser");
         String pass=request.getParameter("txtPass");
-        DataProcess dt=new DataProcess();
+        DataProcess dp=new DataProcess();
         Account acc=new Account();
         acc.setUser(user);
         acc.setPass(pass);
-        if(dt.checkLogin(acc))
+        if(dp.checkLogin(acc))
         {
             String check=request.getParameter("rbm");
             if(check!=null)//user chon remember tai khoan
@@ -57,21 +62,9 @@ public class LoginController extends HttpServlet {
                 }                
             }
         }
-//            HttpSession session=request.getSession();
-//            session.setAttribute("username", acc.getUser());
-//            response.sendRedirect("index.jsp");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + acc.getUser() + acc.getType()  + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+//        HttpSession session=request.getSession();
+////        session.setAttribute("username", acc.getUser());
+//        response.sendRedirect("index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

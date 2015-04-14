@@ -15,7 +15,7 @@
         <link href="./Assets/bootstrap-responsive.css" rel="stylesheet">
         <!--<link rel="stylesheet" href="./Assets/font-awesome.min.css">-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link href="http://www.pxcreate.com/template/simplepxcreate/css/style.css" rel="stylesheet">
+        <link href="./Assets/style.css" rel="stylesheet">
         <link rel="stylesheet" href="./Assets/font-awesome-animation.min.css">
         <link href="http://www.pxcreate.com/template/simplepxcreate/css/jquery.fancybox.css" rel="stylesheet">
         <link href="http://www.pxcreate.com/template/simplepxcreate/css/cloud-zoom.css" rel="stylesheet">
@@ -150,4 +150,5 @@
         <script type="text/javascript" src="./Assets/js/jquery.gmap.js"></script>
         <script type="text/javascript" src="./Assets/js/jquery.countdown.js"></script>
         <script defer="" src="./Assets/js/custom.js"></script>
+        <script defer="" src="./Assets/js/custom2.js"></script>
 </html>

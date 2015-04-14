@@ -422,17 +422,13 @@ $('#brandcarousal').carouFredSel({
 // Category Carousal
 $(window).load(function() {
 $('#categorycarousal').carouFredSel({
-							width: '100%',
-						scroll: 1,
-							auto: false,
+						
 						prev: '#prevcat',
 						next: '#nextcat',
 					    // mousewheel: true,
 						
-						swipe: {
-							onMouse: true,
-							onTouch: true
-						}
+						
+                                                
 					});
 					});
 
